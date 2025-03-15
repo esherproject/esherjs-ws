@@ -1,6 +1,6 @@
 var config = {
-  core_asset: "ABC",
-  address_prefix: "CBA",
+  core_asset: "ESH",
+  address_prefix: "ESHER",
   expire_in_secs: 15,
   expire_in_secs_proposal: 24 * 60 * 60,
   review_in_secs_committee: 24 * 60 * 60,
@@ -17,6 +17,12 @@ var config = {
       chain_id:
         "39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447"
     },
+    Esher: {
+      core_asset: "ESH",
+      address_prefix: "ESHER",
+      chain_id:
+        "dcf5584df4b8b0d5ab0112a2b6b72e2252863aa870575ffd82d44ae3da5fca0e"
+    }
   },
 
   /** Set a few properties for known chain IDs. */
@@ -39,15 +45,15 @@ var config = {
   },
 
   reset: () => {
-    config.core_asset = "ABC";
-    config.address_prefix = "CBA";
+    config.core_asset = "ESH";
+    config.address_prefix = "ESHER";
     config.expire_in_secs = 15;
     config.expire_in_secs_proposal = 24 * 60 * 60;
 
     console.log("Chain config reset");
   },
 
-  setPrefix: (prefix = "CBA") => (config.address_prefix = prefix)
+  setPrefix: (prefix = "ESHER") => (config.address_prefix = prefix)
 };
 
 export default config;
